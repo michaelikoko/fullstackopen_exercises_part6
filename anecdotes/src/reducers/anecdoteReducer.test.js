@@ -23,8 +23,8 @@ describe('anecdoteReducer', () => {
     test('VOTE is implemented', () => {
         const state = initialState
         const action = {
-            type: 'VOTE',
-            payload: { id: 2 }
+            type: 'anecdotes/voteAnecdote',
+            payload: 2 
         }
 
         deepFreeze(state)
@@ -40,12 +40,8 @@ describe('anecdoteReducer', () => {
     test('NEW ANECDOTE is implemented', () => {
         const state = initialState
         const action = {
-            type: 'NEW_ANECDOTE',
-            payload: {
-                content: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
-                id: 4,
-                votes: 0
-            }
+            type: 'anecdotes/createAnecdote',
+            payload: 'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
         }
 
         deepFreeze(state)
